@@ -37,7 +37,7 @@ c6(y6,x6)=3.2;
 c7=q7*exp(-v/(2*k).*(d7-(x-x7)))./(2*pi*k.*d7);
 c7(y7,x7)=2.6;
 %
-c=c0;%+c1+c2+c3;%+c4+c5+c6+c7;
+c=c0+c1+c2+c3;%+c4+c5+c6+c7;
 % cmax=max(max(c));
 % cmin=min(min(c));
 %  

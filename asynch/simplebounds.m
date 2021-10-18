@@ -1,10 +1,17 @@
 function s=simplebounds(s,Lb,Ub)
-% Apply the lower bound
-ns_tmp=s;
-I=ns_tmp<Lb;
-ns_tmp(I)=Lb(I);
-% Apply the upper bounds
-J=ns_tmp>Ub;
-ns_tmp(J)=Ub(J);
-% Update this new move
-s=ns_tmp;
+        if s(1,1) < 1 
+            %s(1,1) = 1;
+            s(1,1) = randi(50);
+        end
+        if s(1,1) > 50 
+            %s(1,1)=50;
+            s(1,1)=randi(50);
+        end
+        if s(1,2) <1 
+            %s(1,2) = 1;
+            s(1,2) = randi(50);
+        end
+        if s(1,2) > 50
+            %s(1,2)=50;
+            s(1,2)=randi(50);
+        end  

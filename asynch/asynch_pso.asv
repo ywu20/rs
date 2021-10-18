@@ -31,13 +31,13 @@ swarm(:, 5) = 0;          % initial velocity
 swarm(:, 6) = 0;          % initial velocity
 %% Iterations
 time = 0; maxd = 0; T = 0;
-gbest = min(i,7);
+gbest = swarm(min(i,7),:);
 tStart=tic;
 tEnd=0;
 %while (tEnd<0.15) % experiment based on cpu time
 %while T < 500 * size(initial_nest) % experiment based on generation
 %while sum(abs(swarm(gbest,3:4)-[10 10])<= [2 2]) ~=2 %experiment based on whether it's found or not
- a= sqrt((swarm(gbest,2)-10) * (swarm(gbest,2)-10) + (swarm(gbest,3)-10)* (swarm(gbest,3)-10));
+ a= sqrt((gbest(1,1)-10) * (gbest(1,1)-10) + (gbest(1,2)-10)* (gbest(1,2)-10));
 while a<=1
     T=T+1;
     pso_first = 1;

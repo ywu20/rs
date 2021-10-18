@@ -1,0 +1,17 @@
+function s=simplebounds(s,Lb,Ub)
+        if s,1) < 1 
+            %swarm (pso_first,1) = 1;
+            swarm (pso_first,1) = randi(50);
+        end
+        if swarm(pso_first,1) > 50 
+            %swarm(pso_first,1)=50;
+            swarm(pso_first,1)=randi(50);
+        end
+        if swarm (pso_first,2) <1 
+            %swarm (pso_first,2) = 1;
+            swarm (pso_first,2) = randi(50);
+        end
+        if swarm(pso_first,2) > 50
+            %swarm(pso_first,2)=50;
+            swarm(pso_first,2)=randi(50);
+        end  
